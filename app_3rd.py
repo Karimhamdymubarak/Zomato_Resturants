@@ -3,8 +3,8 @@ import pandas as pd
 import joblib
 
 
-Inputs = pd.read_pickle("Inputs.pkl")
-Model = pd.read_pickle("Model.pkl")
+Inputs = joblib.load("Inputs.pkl")
+Model = joblib.load("Model.pkl")
 
 def prediction(online_order, book_table, votes, location,approx_cost,listed_in,listed_in_city,cuisines_counts,rest_type_counts):
     test_df = pd.DataFrame(columns=Inputs)
